@@ -1,0 +1,202 @@
+.auth-page {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey_bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.auth-box {
+  position: relative;
+  background-color: var(--white);
+  width: 25vw;
+  height: 60vh;
+  overflow: hidden;
+
+}
+
+.auth-box-title {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.664);
+  font-weight: 400;
+  font-size: 1.05rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--accent);
+  width: 50%;
+  margin: auto;
+  
+}
+
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0;
+  padding: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  justify-content: space-evenly;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.auth-form > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.auth-form > div > input {
+  padding: 0.8rem 2.5rem;
+  padding-right: 0.7rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  font: 300 0.8rem cursive;
+  outline: none;
+}
+
+.auth-form > div > svg {
+  position: absolute;
+  transform: translateX(0.7rem);
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.623);
+}
+.auth-form > div > span {
+ margin: 0;
+ padding: 0;
+}
+
+
+.auth-form > a {
+  color: rgba(0, 0, 0, 0.651);
+  text-decoration: none;
+  align-self: flex-end;
+  transition: all 0.5s;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.auth-form > a:hover {
+  color: var(--black);
+}
+
+.auth-btn {
+  border: none;
+  background-color: #ff3f6c;
+  color: var(--white);
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  /* text-transform: uppercase; */
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+.auth-btn:hover {
+  background-color: var(--accent_hover);
+}
+
+.auth-redirect {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--greyLight);
+}
+
+.auth-redirect > a {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+  .auth-page {
+    margin-top: 0;
+  }
+
+  .auth-box {
+    width: 45vw;
+  }
+
+  .forgot-password-box {
+    width: 40vw;
+  }
+
+  .auth-box-title {
+    padding: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .auth-page {
+    margin-top: 3.5vh;
+    background-color: var(--white);
+    min-height: -webkit-fill-available;
+  }
+
+  .auth-box {
+    width: 100vw;
+    height: 80vh;
+  }
+
+  .forgot-password-box {
+    width: 100vw;
+    height: 55vh;
+  }
+
+  .auth-box-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .auth-form {
+    padding: 2.7rem;
+  }
+
+  .auth-form > div > input {
+    font-family: 'lato';
+    font-size: 1rem;
+    padding: 1.2rem 2.8rem;
+  }
+
+  .auth-form > div > svg {
+    font-size: 1.5rem;
+  }
+
+  .auth-form > a {
+    font-size: 0.9rem;
+  }
+
+  .auth-btn {
+    padding: 1.2rem;
+  }
+
+  .auth-redirect {
+    font-size: 0.9rem;
+  }
+
+  .auth-redirect > a {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+:root {
+  --accent: #ff3f6c;
+  --accent_hover: #ed325e;
+  --white: #ffffff;
+  --black: #282c3f;
+  --greyLight: #696e79;
+  --grey_bg: #e7e7e7;
+}
+
+.navbar {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-name {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.nav-link {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.logout-btn {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  background-color: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  background-color: var(--accent_hover);
+}
+
+
+/* #create employee */
+.newEmployeeContainer.newEmployee {
+  flex: 4 1;
+  box-sizing: border-box;
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.newEmployeeContainer h1 {
+  color: rgba(0, 0, 0, 0.733);
+  font: 300 2rem "Lato";
+  text-align: center;
+ 
+}
+
+.createEmployeeForm.newEmployee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3vmax;
+  justify-content: space-evenly;
+  height: 95%;
+  width: 65vh;
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+}
+
+.createEmployeeForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.createEmployeeForm > div > input,
+.createEmployeeForm > div > select,
+.createEmployeeForm > div > textarea ,
+.createEmployeeForm > div > textarea 
+{
+  padding: 0.8rem .2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  font: 300 0.8rem cursive;
+  outline: none;
+}
+
+.createEmployeeForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+#createEmployeeFormFile > input {
+  display: flex;
+  padding: 0%;
+}
+
+#createEmployeeFormFile > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font: 400 0.8vmax cursive;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(255, 255, 255);
+}
+
+#createEmployeeFormFile > input::file-selector-button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+#createEmployeeFormImage {
+  width: 100%;
+  overflow: auto;
+}
+
+#createEmployeeFormImage > img {
+  width: 3vmax;
+  margin: 0 0.5vmax;
+}
+
+#createEmployeeBtn {
+  border: none;
+  background-color: var(--accent);
+  color: var(--white);
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+#createEmployeeBtn:hover {
+  background-color: var(--accent_hover);
+}
+
+@media screen and (max-width: 600px) {
+  .newEmployeeContainer {
+    background-color: rgb(255, 255, 255);
+  }
+  .createEmployeeForm {
+    padding: 5vmax;
+  }
+
+  .createEmployeeForm > div > input,
+  .createEmployeeForm > div > select,
+  .createEmployeeForm > div > textarea {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .createEmployeeForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  #createEmployeeFormFile > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #createEmployeeFormFile > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax cursive;
+  }
+
+  #createEmployeeBtn {
+    font: 300 1.9vmax "Lato";
+    padding: 1.8vmax;
+  }
+}
+
+
+
+/* employeeList */
+.employeeList{
+  flex: 4;
+  margin: 10px;
+}
+
+.productListItem{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.productListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.productListEdit{
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
